@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import ProductCard from './components/ProductCard';
+import ProductCard from './components/ProductCard.jsx';
 import './App.css';
 
 const initialProducts = [
@@ -30,12 +31,13 @@ const initialProducts = [
 ];
 
 function App() {
-
- 
-
   return (
     <div>
-     {/* code here */}
+    
+      {initialProducts.map((val)=>(
+
+     <ProductCard key={val.id} {...val}/>
+      ))}
     </div>
   );
 }
